@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>MCIR - MineCraftInitRuby ehhh... thingy :)</h1>
+
+<p>MCIR is a little CLI framework to make the administration of one or multiple Minecraft servers easier.
+There are some build-in tasks to get you started (and to legitimate the &quot;init&quot; part of the name) but it isn&#39;t that hard to build your own especially if you&#39;re familiar with the Ruby programming language ;)</p>
+
+<p>Just take a look at the examples, they should give you a little insight of what is possible (look at the restart task).
+There isn&#39;t that much documentation yet, sorry <em>._.</em></p>
+
+<h2>What it does (provide)</h2>
+
+<ul>
+<li>A simple task based framework to build simple managing commands for your minecraft server(s).</li>
+<li>Simple, non-invasive structure.</li>
+<li>Default and example tasks to manage your server(s) and get started with building your own.</li>
+</ul>
+
+<h2>What it (currently) doesn&#39;t (provide)</h2>
+
+<ul>
+<li>Multi user support (all instances need to run under the same user as MCIR)</li>
+<li>Multi machine support (only manages instances on the same machine)</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>Ruby &gt;= 1.9.3 incl. RubyGems
+
+<ul>
+<li>Bundler gem (<code>gem install bundler</code>)</li>
+</ul></li>
+<li>git (<code>apt-get install git</code> / <code>brew install git</code>)</li>
+<li>Unixoid OS (such as Ubuntu/Debian, OS X, maybe others)</li>
+<li>screen command installed (<code>apt-get install screen</code>)</li>
+<li>local minecraft server(s) (minecraft, bukkit, whatever)</li>
+</ul>
+
+<h2>Setup</h2>
+
+<ol>
+<li>Do everything as the user which runs the servers except maybe the symlink in step 2.</li>
+<li>Download or clone the whole thing to where you&#39;re servers are:
+  <pre class="code ruby"><code class="ruby">
+    cd ~
+    git clone &lt;a href=&quot;https://github.com/2called-chaos/MCIR.git&quot;&gt;https://github.com/2called-chaos/MCIR.git&lt;/a&gt;</code></pre></li>
+<li>Optional but recommended: Add the bin directory to your $PATH variable or create a symlink to the executable:
+  <pre class="code ruby"><code class="ruby">
+    echo 'export PATH=&quot;$HOME/MCIR/bin:$PATH&quot;' &gt;&gt; ~/.profile &amp;&amp; source ~/.profile
+    OR
+    ln -s /home/minecraft_server/MCIR/bin/mcir /usr/local/bin/mcir</code></pre></li>
+<li>Install the bundle
+  <pre class="code ruby"><code class="ruby">
+    <span class='id identifier rubyid_cd'>cd</span> <span class='op'>~</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>MCIR &amp;&amp; bundle install --without test --deployment</span></span></code></pre></li>
+<li>Copy and edit the example configuration to fit your needs and server settings.
+ Please note that there is currently no user support which means all servers need to run under the same user as MCIR does.
+  <pre class="code ruby"><code class="ruby">
+    <span class='id identifier rubyid_cd'>cd</span> <span class='op'>~</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>MCIR
+    cp config.example.yml config.yml
+</span></span></code></pre></li>
+<li>Dig right into it! Run <code>mcir --help</code> to get a list of default options and available actions.
+ Run <code>mcir &lt;action&gt; --help</code> to get a list of all the action specific options.</li>
+</ol>
+
+<h2>Actions</h2>
+
+<pre class="code ruby"><code class="ruby">     <span class='id identifier rubyid_kick'>kick</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_kick'>kick</span> <span class='id identifier rubyid_specific'>specific</span> <span class='kw'>or</span> <span class='id identifier rubyid_all'>all</span> <span class='id identifier rubyid_players'>players</span> <span class='id identifier rubyid_from'>from</span> <span class='id identifier rubyid_the'>the</span> <span class='id identifier rubyid_server'>server</span> <span class='lparen'>(</span><span class='id identifier rubyid_sample'>sample</span> <span class='id identifier rubyid_task'>task</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_start'>start</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_starts'>starts</span> <span class='id identifier rubyid_a'>a</span> <span class='id identifier rubyid_server'>server</span>
+     <span class='id identifier rubyid_stop'>stop</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_stops'>stops</span> <span class='id identifier rubyid_a'>a</span> <span class='id identifier rubyid_server'>server</span>
+  <span class='id identifier rubyid_restart'>restart</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_restarts'>restarts</span> <span class='id identifier rubyid_a'>a</span> <span class='id identifier rubyid_server'>server</span>
+   <span class='id identifier rubyid_status'>status</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_shows'>shows</span> <span class='id identifier rubyid_the'>the</span> <span class='id identifier rubyid_status'>status</span> <span class='id identifier rubyid_of'>of</span> <span class='id identifier rubyid_a'>a</span> <span class='id identifier rubyid_server'>server</span>
+  <span class='id identifier rubyid_console'>console</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_attaches'>attaches</span> <span class='id identifier rubyid_the'>the</span> <span class='id identifier rubyid_screen'>screen</span> <span class='id identifier rubyid_with'>with</span> <span class='id identifier rubyid_the'>the</span> <span class='id identifier rubyid_console'>console</span>
+  <span class='id identifier rubyid_inspect'>inspect</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_shows'>shows</span> <span class='id identifier rubyid_information'>information</span> <span class='id identifier rubyid_about'>about</span> <span class='id identifier rubyid_a'>a</span> <span class='id identifier rubyid_server'>server</span>
+     <span class='id identifier rubyid_rcon'>rcon</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_provides'>provides</span> <span class='id identifier rubyid_rcon'>rcon</span> <span class='id identifier rubyid_accessors'>accessors</span>
+    <span class='id identifier rubyid_shell'>shell</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_gives'>gives</span> <span class='id identifier rubyid_you'>you</span> <span class='id identifier rubyid_an'>an</span> <span class='id identifier rubyid_interactive'>interactive</span> <span class='id identifier rubyid_shell'>shell</span>
+     <span class='id identifier rubyid_tail'>tail</span> <span class='id identifier rubyid_…'>…</span> <span class='id identifier rubyid_tails'>tails</span> <span class='id identifier rubyid_the'>the</span> <span class='id identifier rubyid_server'>server</span> <span class='id identifier rubyid_log'>log</span>
+</code></pre>
+
+<h4>kick</h4>
+
+<pre class="code ruby"><code class="ruby">  -a, --all                        kick all PLAYERs from the server
+  -p, --players PLAYER,2nd,3rd     kicks PLAYERs from the server
+  -r, --reason MSG                 specify a kick reason (def: Good bye!)
+</code></pre>
+
+<h4>start / restart</h4>
+
+<pre class="code ruby"><code class="ruby">    -a, --attach                     Attach session after creation (def: false)
+    -i, --inplace                    Start server without screen (def: false)
+</code></pre>
+
+<h4>stop / restart</h4>
+
+<pre class="code ruby"><code class="ruby">    -f, --force                      Kill the screen immediately, ignores all following options (def: false)
+    -e, --ensure                     Kill the screen if the server didn't stop after timeout is reached (def: false)
+    -t, --timeout N                  Wait N seconds for the server to stop (def: 10)
+    -d, --delay N                    Wait N seconds before stopping the server if --message is given) (def: 15)
+    -m, --message MSG                Send message to server before waiting --delay (def: 10)
+    -k, --kick [MSG]                 Kick all players before the server will shutdown (def: false)
+</code></pre>
+
+<h4>status</h4>
+
+<pre class="code ruby"><code class="ruby">    -a, --all                        Check with every method
+    -l, --[no-]lock                  Check lockfile (def: true)
+    -s, --[no-]screen                Check screen (def: true)
+    -r, --[no-]rcon                  Check rcon (def: false)
+    -q, --[no-]query                 Check query (def: false)
+</code></pre>
+
+<h4>console</h4>
+
+<pre class="code ruby"><code class="ruby">    -f, --fast                       Attach a screen much faster (def: false)
+</code></pre>
+
+<h4>inspect</h4>
+
+<pre class="code ruby"><code class="ruby">    -a, --all                        Show everything
+    -n, --none                       Show nothing
+    -m, --[no-]mcir                  Show the MCIR instance config (def: true)
+    -p, --[no-]plist                 Show the server's property list (def: false)
+</code></pre>
+
+<h4>rcon</h4>
+
+<pre class="code ruby"><code class="ruby">    -c, --command CMD                executes the given command and return the result
+    -q, --query [simple|full]        returns the result of an query (def: simple)
+</code></pre>
+
+<h4>shell</h4>
+
+<pre class="code ruby"><code class="ruby">    -e, --exec CMD                   Executes the command non-interactively
+</code></pre>
+
+<h4>tail</h4>
+
+<pre class="code ruby"><code class="ruby">    -b, --backlog N                  shows the last N lines of the log
+    -f, --follow                     follow the file, wait for new contents
+    -i, --interval                   tail interval in seconds (def: 1)
+    -t, --timeout N                  wait for N seconds, then abort (def: 30)
+    -w, --wait MSG                   follow file until MSG is found (incl. backlog!)
+                                     MSGs starting with a slash are evaluated as regex
+</code></pre>
+
+<h2>Add custom action</h2>
+
+<p>To add your own custom action you have two options.</p>
+
+<p>If you just need a quick and simple command open the file <code>/home/minecraft_server/MCIR/mcir.rb</code> and take a look at the examples.
+Otherwise take a look into the directory <code>/home/minecraft_server/MCIR/actions</code>. All default actions are there so you should have some examples to work with. All .rb files in this directory and it&#39;s subdirectories are automatically loaded.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Mon Jul 22 13:59:23 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

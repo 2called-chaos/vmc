@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Mcir::Instance
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Mcir.html" title="Mcir (module)">Mcir</a></span></span>
+     &raquo; 
+    <span class="title">Instance</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Mcir::Instance
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Mcir::Instance</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="Instance/Commands.html" title="Mcir::Instance::Commands (module)">Commands</a></span>, <span class='object_link'><a href="Instance/Getters.html" title="Mcir::Instance::Getters (module)">Getters</a></span>, <span class='object_link'><a href="Instance/IO.html" title="Mcir::Instance::IO (module)">IO</a></span>, <span class='object_link'><a href="Instance/Paths.html" title="Mcir::Instance::Paths (module)">Paths</a></span>, <span class='object_link'><a href="Instance/Rcon.html" title="Mcir::Instance::Rcon (module)">Rcon</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/mcir/instance.rb<span class="defines">,<br />
+  lib/mcir/instance/io.rb,<br /> lib/mcir/instance/rcon.rb,<br /> lib/mcir/instance/paths.rb,<br /> lib/mcir/instance/getters.rb,<br /> lib/mcir/instance/commands.rb,<br /> lib/mcir/instance/server_log.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Instance representing your server (or whatever resource).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Instance/Commands.html" title="Mcir::Instance::Commands (module)">Commands</a></span>, <span class='object_link'><a href="Instance/Getters.html" title="Mcir::Instance::Getters (module)">Getters</a></span>, <span class='object_link'><a href="Instance/IO.html" title="Mcir::Instance::IO (module)">IO</a></span>, <span class='object_link'><a href="Instance/Paths.html" title="Mcir::Instance::Paths (module)">Paths</a></span>, <span class='object_link'><a href="Instance/Rcon.html" title="Mcir::Instance::Rcon (module)">Rcon</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Instance/ServerLog.html" title="Mcir::Instance::ServerLog (class)">ServerLog</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config-instance_method" title="#config (instance method)">- (Object) <strong>config</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute config.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mcir-instance_method" title="#mcir (instance method)">- (Object) <strong>mcir</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute mcir.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">- (Object) <strong>name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute name.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#in_home-instance_method" title="#in_home (instance method)">- (Object) <strong>in_home</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Helper to call the block in the instance's home directory.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Instance) <strong>initialize</strong>(mcir, name) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new instance object.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Instance/Getters.html" title="Mcir::Instance::Getters (module)">Getters</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Instance/Getters.html#online%3F-instance_method" title="Mcir::Instance::Getters#online? (method)">#online?</a></span>, <span class='object_link'><a href="Instance/Getters.html#port-instance_method" title="Mcir::Instance::Getters#port (method)">#port</a></span>, <span class='object_link'><a href="Instance/Getters.html#query_port-instance_method" title="Mcir::Instance::Getters#query_port (method)">#query_port</a></span>, <span class='object_link'><a href="Instance/Getters.html#rcon_port-instance_method" title="Mcir::Instance::Getters#rcon_port (method)">#rcon_port</a></span>, <span class='object_link'><a href="Instance/Getters.html#screen_name-instance_method" title="Mcir::Instance::Getters#screen_name (method)">#screen_name</a></span>, <span class='object_link'><a href="Instance/Getters.html#screen_status-instance_method" title="Mcir::Instance::Getters#screen_status (method)">#screen_status</a></span>, <span class='object_link'><a href="Instance/Getters.html#server_ip-instance_method" title="Mcir::Instance::Getters#server_ip (method)">#server_ip</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Instance/Paths.html" title="Mcir::Instance::Paths (module)">Paths</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Instance/Paths.html#distinct_relative_path-instance_method" title="Mcir::Instance::Paths#distinct_relative_path (method)">#distinct_relative_path</a></span>, <span class='object_link'><a href="Instance/Paths.html#lockfile_file-instance_method" title="Mcir::Instance::Paths#lockfile_file (method)">#lockfile_file</a></span>, <span class='object_link'><a href="Instance/Paths.html#logfile_path-instance_method" title="Mcir::Instance::Paths#logfile_path (method)">#logfile_path</a></span>, <span class='object_link'><a href="Instance/Paths.html#properties_path-instance_method" title="Mcir::Instance::Paths#properties_path (method)">#properties_path</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Instance/Commands.html" title="Mcir::Instance::Commands (module)">Commands</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Instance/Commands.html#java_start-instance_method" title="Mcir::Instance::Commands#java_start (method)">#java_start</a></span>, <span class='object_link'><a href="Instance/Commands.html#screen_attach-instance_method" title="Mcir::Instance::Commands#screen_attach (method)">#screen_attach</a></span>, <span class='object_link'><a href="Instance/Commands.html#screen_exec-instance_method" title="Mcir::Instance::Commands#screen_exec (method)">#screen_exec</a></span>, <span class='object_link'><a href="Instance/Commands.html#screen_kill-instance_method" title="Mcir::Instance::Commands#screen_kill (method)">#screen_kill</a></span>, <span class='object_link'><a href="Instance/Commands.html#screen_start-instance_method" title="Mcir::Instance::Commands#screen_start (method)">#screen_start</a></span>, <span class='object_link'><a href="Instance/Commands.html#stuff_command-instance_method" title="Mcir::Instance::Commands#stuff_command (method)">#stuff_command</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Instance/IO.html" title="Mcir::Instance::IO (module)">IO</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Instance/IO.html#lockfile%3F-instance_method" title="Mcir::Instance::IO#lockfile? (method)">#lockfile?</a></span>, <span class='object_link'><a href="Instance/IO.html#logfile-instance_method" title="Mcir::Instance::IO#logfile (method)">#logfile</a></span>, <span class='object_link'><a href="Instance/IO.html#properties-instance_method" title="Mcir::Instance::IO#properties (method)">#properties</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Instance/Rcon.html" title="Mcir::Instance::Rcon (module)">Rcon</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Instance/Rcon.html#query-instance_method" title="Mcir::Instance::Rcon#query (method)">#query</a></span>, <span class='object_link'><a href="Instance/Rcon.html#rcon-instance_method" title="Mcir::Instance::Rcon#rcon (method)">#rcon</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Mcir::Instance (class)">Instance</a></span></tt>) <strong>initialize</strong>(mcir, name) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Initializes a new instance object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mcir</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Core.html" title="Mcir::Core (class)">Mcir::Core</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>MCIR instance</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the instance (in config).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/instance.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span> <span class='id identifier rubyid_mcir'>mcir</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@mcir</span> <span class='op'>=</span> <span class='id identifier rubyid_mcir'>mcir</span>
+  <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='ivar'>@config</span> <span class='op'>=</span> <span class='ivar'>@mcir</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>instances</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='ivar'>@name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="config-instance_method">
+  
+    - (<tt>Object</tt>) <strong>config</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute config</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/instance.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config'>config</span>
+  <span class='ivar'>@config</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="mcir-instance_method">
+  
+    - (<tt>Object</tt>) <strong>mcir</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute mcir</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/instance.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mcir'>mcir</span>
+  <span class='ivar'>@mcir</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    - (<tt>Object</tt>) <strong>name</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/instance.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="in_home-instance_method">
+  
+    - (<tt>Object</tt>) <strong>in_home</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Helper to call the block in the instance's home directory.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Block to execute with the instance’s home directory as `pwd`.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/instance.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_in_home'>in_home</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
+  <span class='id identifier rubyid_old_home'>old_home</span> <span class='op'>=</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_getwd'>getwd</span>
+  <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_chdir'>chdir</span><span class='lparen'>(</span><span class='ivar'>@config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>home</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+<span class='kw'>ensure</span>
+  <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_chdir'>chdir</span><span class='lparen'>(</span><span class='id identifier rubyid_old_home'>old_home</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Jul 22 13:59:24 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

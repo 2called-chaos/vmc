@@ -1,0 +1,1169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Banana::Logger
+  
+    &mdash; Documentation by YARD 0.8.6.2
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (L)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Banana.html" title="Banana (module)">Banana</a></span></span>
+     &raquo; 
+    <span class="title">Logger</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Banana::Logger
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Banana::Logger</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/mcir/logger.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="COLORMAP-constant" class="">COLORMAP =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>black:</span> <span class='int'>30</span><span class='comma'>,</span>
+  <span class='label'>red:</span> <span class='int'>31</span><span class='comma'>,</span>
+  <span class='label'>green:</span> <span class='int'>32</span><span class='comma'>,</span>
+  <span class='label'>yellow:</span> <span class='int'>33</span><span class='comma'>,</span>
+  <span class='label'>blue:</span> <span class='int'>34</span><span class='comma'>,</span>
+  <span class='label'>magenta:</span> <span class='int'>35</span><span class='comma'>,</span>
+  <span class='label'>cyan:</span> <span class='int'>36</span><span class='comma'>,</span>
+  <span class='label'>white:</span> <span class='int'>37</span><span class='comma'>,</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#colorize-instance_method" title="#colorize (instance method)">- (Object) <strong>colorize</strong>(str, color) </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute colorize.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prefix-instance_method" title="#prefix (instance method)">- (Object) <strong>prefix</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute prefix.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attach-instance_method" title="#attach (instance method)">- (Object) <strong>attach</strong>(channel) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#debug-instance_method" title="#debug (instance method)">- (Object) <strong>debug</strong>(msg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#debug%3F-instance_method" title="#debug? (instance method)">- (Boolean) <strong>debug?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disable-instance_method" title="#disable (instance method)">- (Object) <strong>disable</strong>(level = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disabled%3F-instance_method" title="#disabled? (instance method)">- (Boolean) <strong>disabled?</strong>(level = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enable-instance_method" title="#enable (instance method)">- (Object) <strong>enable</strong>(level = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enabled%3F-instance_method" title="#enabled? (instance method)">- (Boolean) <strong>enabled?</strong>(level = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ensure_prefix-instance_method" title="#ensure_prefix (instance method)">- (Object) <strong>ensure_prefix</strong>(prefix, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Logger) <strong>initialize</strong>(scope) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log-instance_method" title="#log (instance method)">- (Object) <strong>log</strong>(msg, type = :info) </a>
+    
+
+    
+      (also: #info)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log_level-instance_method" title="#log_level (instance method)">- (Object) <strong>log_level</strong>(levels = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log_with_print-instance_method" title="#log_with_print (instance method)">- (Object) <strong>log_with_print</strong>(clear = true, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#warn-instance_method" title="#warn (instance method)">- (Object) <strong>warn</strong>(msg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Banana::Logger (class)">Logger</a></span></tt>) <strong>initialize</strong>(scope) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of Logger</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span> <span class='id identifier rubyid_scope'>scope</span>
+  <span class='ivar'>@scope</span> <span class='op'>=</span> <span class='id identifier rubyid_scope'>scope</span>
+  <span class='ivar'>@startup</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_utc'>utc</span>
+  <span class='ivar'>@colorize</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@prefix</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@channel</span> <span class='op'>=</span> <span class='const'>Kernel</span>
+  <span class='ivar'>@method</span> <span class='op'>=</span> <span class='symbol'>:puts</span>
+  <span class='ivar'>@logged</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@levels</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>info:</span> <span class='lbrace'>{</span> <span class='label'>color:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yellow</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>enabled:</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>warn:</span> <span class='lbrace'>{</span> <span class='label'>color:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>red</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>enabled:</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>abort:</span> <span class='lbrace'>{</span> <span class='label'>color:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>red</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>enabled:</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>debug:</span> <span class='lbrace'>{</span> <span class='label'>color:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>blue</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>enabled:</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="colorize=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="colorize-instance_method">
+  
+    - (<tt>Object</tt>) <strong>colorize</strong>(str, color) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute colorize</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_colorize'>colorize</span>
+  <span class='ivar'>@colorize</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="prefix=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="prefix-instance_method">
+  
+    - (<tt>Object</tt>) <strong>prefix</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute prefix</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prefix'>prefix</span>
+  <span class='ivar'>@prefix</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="attach-instance_method">
+  
+    - (<tt>Object</tt>) <strong>attach</strong>(channel) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attach'>attach</span> <span class='id identifier rubyid_channel'>channel</span>
+  <span class='ivar'>@channel</span> <span class='op'>=</span> <span class='id identifier rubyid_channel'>channel</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="debug-instance_method">
+  
+    - (<tt>Object</tt>) <strong>debug</strong>(msg) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 113</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_debug'>debug</span> <span class='id identifier rubyid_msg'>msg</span>
+  <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='symbol'>:debug</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="debug?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>debug?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_debug?'>debug?</span>
+  <span class='id identifier rubyid_enabled?'>enabled?</span> <span class='symbol'>:debug</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable-instance_method">
+  
+    - (<tt>Object</tt>) <strong>disable</strong>(level = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable'>disable</span> <span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@enabled</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:enabled</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disabled?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>disabled?</strong>(level = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disabled?'>disabled?</span> <span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='op'>!</span><span class='id identifier rubyid_enabled?'>enabled?</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable-instance_method">
+  
+    - (<tt>Object</tt>) <strong>enable</strong>(level = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable'>enable</span> <span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:enabled</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enabled?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>enabled?</strong>(level = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enabled?'>enabled?</span> <span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='ivar'>@enabled</span> <span class='op'>:</span> <span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:enabled</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ensure_prefix-instance_method">
+  
+    - (<tt>Object</tt>) <strong>ensure_prefix</strong>(prefix, &amp;block) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ensure_prefix'>ensure_prefix</span> <span class='id identifier rubyid_prefix'>prefix</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
+  <span class='id identifier rubyid_old_prefix'>old_prefix</span><span class='comma'>,</span> <span class='ivar'>@prefix</span> <span class='op'>=</span> <span class='ivar'>@prefix</span><span class='comma'>,</span> <span class='id identifier rubyid_prefix'>prefix</span>
+  <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+<span class='kw'>ensure</span>
+  <span class='ivar'>@prefix</span> <span class='op'>=</span> <span class='id identifier rubyid_old_prefix'>old_prefix</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log-instance_method">
+  
+    - (<tt>Object</tt>) <strong>log</strong>(msg, type = :info) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='info-instance_method'>info</span></span>
+    </span>
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='symbol'>:info</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@enabled</span> <span class='op'>||</span> <span class='op'>!</span><span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:enabled</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='op'>!</span><span class='ivar'>@levels</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_time'>time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_at'>at</span><span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_utc'>utc</span> <span class='op'>-</span> <span class='ivar'>@startup</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_utc'>utc</span>
+    <span class='id identifier rubyid_timestr'>timestr</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_time'>time</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S.%L</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span><span class='rbrace'>}</span><span class='tstring_content'>]\t</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='kw'>if</span> <span class='ivar'>@colorize</span>
+      <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='id identifier rubyid_timestr'>timestr</span><span class='comma'>,</span> <span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:color</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@prefix</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_colorize'>colorize</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:color</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_timestr'>timestr</span><span class='rbrace'>}</span><span class='embexpr_beg'>#{</span><span class='ivar'>@prefix</span><span class='rbrace'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_msg'>msg</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@logged</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='ivar'>@channel</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='ivar'>@method</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log_level-instance_method">
+  
+    - (<tt>Object</tt>) <strong>log_level</strong>(levels = {}) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_log_level'>log_level</span> <span class='id identifier rubyid_levels'>levels</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_levels'>levels</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_level'>level</span><span class='comma'>,</span> <span class='id identifier rubyid_color'>color</span><span class='op'>|</span>
+    <span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@levels</span><span class='lbracket'>[</span><span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:color</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_color'>color</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log_with_print-instance_method">
+  
+    - (<tt>Object</tt>) <strong>log_with_print</strong>(clear = true, &amp;block) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_log_with_print'>log_with_print</span> <span class='id identifier rubyid_clear'>clear</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
+  <span class='id identifier rubyid_old_method'>old_method</span><span class='comma'>,</span> <span class='id identifier rubyid_old_logged'>old_logged</span> <span class='op'>=</span> <span class='ivar'>@method</span><span class='comma'>,</span> <span class='ivar'>@logged</span>
+  <span class='ivar'>@method</span><span class='comma'>,</span> <span class='ivar'>@logged</span> <span class='op'>=</span> <span class='symbol'>:print</span><span class='comma'>,</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+<span class='kw'>ensure</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='kw'>if</span> <span class='id identifier rubyid_clear'>clear</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@logged</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+  <span class='ivar'>@method</span> <span class='op'>=</span> <span class='id identifier rubyid_old_method'>old_method</span>
+  <span class='ivar'>@logged</span> <span class='op'>=</span> <span class='id identifier rubyid_old_logged'>old_logged</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="warn-instance_method">
+  
+    - (<tt>Object</tt>) <strong>warn</strong>(msg) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mcir/logger.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_warn'>warn</span> <span class='id identifier rubyid_msg'>msg</span>
+  <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='symbol'>:warn</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Jul 22 13:59:24 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

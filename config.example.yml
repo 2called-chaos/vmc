@@ -4,7 +4,7 @@ mcir:
   debug: false
 
   # the default instance if none is given and none could have been guessed.
-  default_instance: localbukkit
+  default_instance: debian
 
   # If set to true mcir will try to autocomplete instance names.
   # (the dot acts as filter chain)
@@ -16,23 +16,12 @@ mcir:
   # This guessing only takes place if you don't pass an instance name.
   instance_cwd_guessing: true
 
-  # java executable (might be java or java.exe)
-  java_exe: java
-
-  # will always be used unless `skip_java_args: true` is set
-  java_args: -server
+  # vmrun executable (propably no need to change)
+  vmrun: vmrun
 
 instance_defaults: &default_instance
-  executable: minecraft_server.jar nogui
-  skip_java_args: false
-  java_args: -Xms1048M -Xmx2048M
+  type: player # ws|server|server1|fusion|esx|vc|player
 
-  # You propably won't need to edit these...
-  server_log: server.log
-  server_plist: server.properties
-
-  # Change this to `end' for BungeeCord instances
-  stop_command: stop
 
 # ==============================
 # = Define your instances here =
@@ -40,21 +29,12 @@ instance_defaults: &default_instance
 # You should inherit from the default instance.
 # Just look at the examples.
 instances:
-  # this one is just for rspec testing
-  rspec:
+  debian:
     <<: *default_instance
-    home: "%MCIR_ROOT%/spec/server"
+    name: debian # set to match <home>/<name>.vmx (defaults to instance name and can be omitted if equal)
+    home: /root/vmware/debian
 
-  localbukkit:
-    <<: *default_instance
-    home: /Users/chaos/Library/Application Support/minecraft/_bukkit
-    screen_name: mcir_localbukkit # is the default
-    executable: craftbukkit.jar
-    java_args: -Xms100M -Xmx512M
-
-  geekya_main:
-    <<: *default_instance
-    home: /home/geekyamc/_main
-    screen_name: mcir_geekya_main # you get the idea?
-    executable: craftbukkit.jar
-    java_args: -Xms2048M -Xmx10240M
+    # Guest authentication
+    # required for several commands (like screenCapture)
+    guser: root
+    gpass: foobar

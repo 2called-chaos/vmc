@@ -53,7 +53,7 @@ module Mcir
       @config = @mcir.config["instances"][@name]
     end
 
-    include Getters, Paths, Commands, IO, Rcon
+    include Getters, Paths, Commands, IO
 
     # --------------------------------
 

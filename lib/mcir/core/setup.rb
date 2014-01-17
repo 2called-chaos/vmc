@@ -33,7 +33,7 @@ class Mcir::Core
     # @private
     def init_opts
       @opts = OptionParser.new do |opts|
-        opts.banner = "Usage: mcir [instance] action [options]"
+        opts.banner = "Usage: vmc [instance] action [options]"
         opts.on("-h", "--help", opts.desc_def("Show this help")) { show_help }
         opts.on("-n", "--dryrun", opts.desc_def("Commands won't be executed but printed as debug messages (with --debug)")) {
           @logger.info "Dryrun enabled (not all actions might implement it)"

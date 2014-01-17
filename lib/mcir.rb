@@ -27,7 +27,6 @@ module Mcir
     require "#{lib}/instance/io"
     require "#{lib}/instance/commands"
     require "#{lib}/instance/server_log"
-    require "#{lib}/instance/rcon"
     require "#{lib}/instance"
     require "#{lib}/action"
     require "#{lib}/logger"

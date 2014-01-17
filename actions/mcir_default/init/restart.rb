@@ -1,7 +1,7 @@
 module Mcir::Action::Init
   class Restart < Mcir::Action
     @name = "restart"
-    @desc = "restarts a server"
+    @desc = "restarts an instance"
 
     def setup!
       @mcir.prepare_action :stop

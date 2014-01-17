@@ -56,7 +56,7 @@ class Mcir::Instance
     end
 
     def guest_ip
-      vmrung + Mcir::Command.new(["unpause", vmx])
+      vmrung + Mcir::Command.new(["getGuestIPAddress", vmx])
     end
 
     def capture_screen file

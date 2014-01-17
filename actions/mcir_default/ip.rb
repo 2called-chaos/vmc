@@ -8,7 +8,7 @@ class Mcir::Action::Ip < Mcir::Action
 
     instance.in_home do
       @mcir.log a=instance.guest_ip!
-      @mcir.log a.out
+      @mcir.log a.out.strip
     end
   end
 

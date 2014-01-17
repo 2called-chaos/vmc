@@ -20,7 +20,7 @@ class Mcir::Instance
     def vm_grid instance
       vm_list!.out.split("\n")[1..-1].each_with_object({}) do |line, grid|
         grid[line] = true
-      end
+      end[instance]
     end
 
     def online?

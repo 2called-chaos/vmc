@@ -24,7 +24,7 @@ class Mcir::Instance
     end
 
     def vmrung
-      Mcir::Command.new("vmrun -T #{engine}", "-gu #{@config["guser"]}", "-gp #{@config["gpass"]}")
+      Mcir::Command.new(["vmrun -T #{engine}", "-gu #{@config["guser"]}", "-gp #{@config["gpass"]}"])
     end
 
     def vm_list

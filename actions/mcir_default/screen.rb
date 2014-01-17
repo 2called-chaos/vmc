@@ -23,5 +23,6 @@ class Mcir::Action::Screen < Mcir::Action
       @config[:capture] -= 1
       @config[:capture] > 0 ? sleep(1) : return
     end
+    puts
   end
 end

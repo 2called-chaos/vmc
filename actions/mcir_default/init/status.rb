@@ -5,7 +5,7 @@ module Mcir::Action::Init
 
     def call instance, args
       if @mcir.logger.enabled?
-        @mcir.logger.info @mcir.cgr!(instance.online?,   "VM ", "ONLINE", "OFFLINE")
+        @mcir.logger.info @mcir.cgr!(instance.online?,   "VM #{@name}", "ONLINE", "OFFLINE")
       else
         puts stati.to_json
       end

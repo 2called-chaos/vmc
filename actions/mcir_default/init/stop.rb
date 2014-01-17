@@ -40,7 +40,7 @@ module Mcir::Action::Init
 
     def graceful_shutdown
       # send stop to server
-      @instance.screen_exec! @instance.config["stop_command"] || "stop"
+      @instance.stop!
       force_shutdown if !wait_for_server_to_shutdown && @config[:ensure]
     end
 

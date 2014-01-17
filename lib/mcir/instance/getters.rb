@@ -18,12 +18,13 @@ class Mcir::Instance
     end
 
     def vm_grid instance
-      rlist = vm_list!
-      binding.pry
+      vm_list!.out.split("\n")[1..-1].each_with_object({}) do |line, grid|
+        grid[line] = true
+      end
     end
 
     def online?
-      vm_grid(@name)
+      vm_grid(vmx)
     end
   end
 end

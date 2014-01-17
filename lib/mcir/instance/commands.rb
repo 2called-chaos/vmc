@@ -14,8 +14,8 @@ class Mcir::Instance
 
     def help_cmd
       @mcir.log "Available commands:"
-      CMDS.each_slice(6) do |set|
-        @mcir.log set.map{|c| "#{c} (#{method(c).arity})" }.join("\t")
+      CMDS.each_slice(4) do |set|
+        @mcir.log set.map{|c| "#{c}(#{method(c).arity})" }.join("\t\t")
       end
     end
 

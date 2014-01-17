@@ -7,7 +7,7 @@ class Mcir::Action::Ip < Mcir::Action
     abort_unless_screen_running!
 
     instance.in_home do
-      @mcir.log a=instance.client_ip!
+      @mcir.log a=instance.guest_ip!
       @mcir.log a.out
     end
   end

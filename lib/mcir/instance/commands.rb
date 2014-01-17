@@ -1,10 +1,21 @@
 class Mcir::Instance
   # Contains command builders for instances.
   module Commands
+    CMDS = [
+      :vmrun, :vm_list, :start, :stop, :kill, :reset, :pause, :unpause, :guest_ip, :capture_screen,
+      :file_exists?, :dir_exists?, :rm_file, :rm_dir, :mk_dir, :ls_proc, :kill_proc
+    ]
     # bangable methods
-    [:vmrun, :vm_list, :start, :stop, :kill, :reset, :pause, :unpause, :guest_ip, :capture_screen].each do |method|
+    CMDS.each do |method|
       define_method "#{method}!", ->(*args, &block) do
         self.send(method, *args, &block).execute!
+      end
+    end
+
+    def help_cmd
+      @mcir.log "Available commands:"
+      CMDS.each_slice(6) do |set|
+        @mcir.log set.map{|c| "#{c} (#{method(c).arity})" }.join("\t")
       end
     end
 

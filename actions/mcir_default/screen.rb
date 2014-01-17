@@ -18,7 +18,7 @@ class Mcir::Action::Screen < Mcir::Action
   def call instance, args
     @instance = instance
     while true
-      capture_screenshot!
+      @instance.capture_screenshot!
       @config[:capture] -= 1
       @config[:capture] > 0 ? sleep(1) : return
     end

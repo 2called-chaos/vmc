@@ -19,6 +19,7 @@ class Mcir::Action::Screen < Mcir::Action
     @instance = instance
     while true
       @instance.capture_screenshot!
+      print "."
       @config[:capture] -= 1
       @config[:capture] > 0 ? sleep(1) : return
     end

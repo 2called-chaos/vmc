@@ -15,7 +15,7 @@ module Mcir::Action::Init
     end
 
     def abort_unless_screen_running!
-      if @instance.online?
+      unless @instance.online?
         @mcir.abort "Can't unpause ".red << "#{@instance.name}".magenta << ", not running!".red
       end
     end

@@ -23,7 +23,8 @@ class Mcir::Action::Screen < Mcir::Action
       FileUtils.chmod(0777, f) if @config[:chmod]
       print "."
       @config[:capture] -= 1
-      @config[:capture] > 0 ? sleep(1) : return puts
+      @config[:capture] > 0 ? sleep(1) : break
     end
+    puts
   end
 end
